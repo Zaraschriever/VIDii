@@ -1,0 +1,226 @@
+/* CSS Document */
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+html, body {
+  height:100%;
+  margin:0;
+  background-color: aqua;
+}
+
+button:not([disabled]) {
+  cursor:pointer;
+}
+
+/* jouw CSS vanaf hier */
+
+header {
+  height: 15vh;
+}
+
+h1 {
+  color:crimson;
+  text-align: center;
+}
+
+/* mariobros logo */
+h1 span {
+  width: 60px;
+  height: 60px;
+}
+
+h1 span:first-of-type {
+  background-color: blue;
+  -webkit-clip-path: polygon(96% 26%, 68% 4%, 32% 6%, 12% 36%, 54% 63%, 48% 69%, 25% 50%, 8% 73%, 34% 97%, 76% 96%, 92% 61%, 52% 35%, 56% 28%, 79% 47%);
+  clip-path: polygon(96% 26%, 68% 4%, 32% 6%, 12% 36%, 54% 63%, 48% 69%, 25% 50%, 8% 73%, 34% 97%, 76% 96%, 92% 61%, 52% 35%, 56% 28%, 79% 47%);;
+}
+
+h1 span:nth-of-type(2) {
+  background-color: yellow;
+  -webkit-clip-path: polygon(12% 10%, 50% 13%, 42% 63%, 56% 62%, 55% 22%, 93% 27%, 85% 75%, 72% 94%, 28% 94%, 8% 75%);
+  clip-path: polygon(12% 10%, 50% 13%, 42% 63%, 56% 62%, 55% 22%, 93% 27%, 85% 75%, 72% 94%, 28% 94%, 8% 75%);
+}
+
+h1 span:nth-of-type(3) {
+  background-color: red;
+  -webkit-clip-path: polygon(10% 11%, 60% 2%, 92% 18%, 88% 55%, 68% 74%, 48% 75%, 49% 96%, 21% 98%, 36% 50%, 60% 51%, 64% 34%, 45% 28%, 21% 100%);
+  clip-path: polygon(10% 11%, 60% 2%, 92% 18%, 88% 55%, 68% 74%, 48% 75%, 49% 96%, 21% 98%, 36% 50%, 60% 51%, 64% 34%, 45% 28%, 21% 100%);
+}
+
+h1 span:nth-of-type(4) {
+  background-color: green;
+  -webkit-clip-path: polygon(86% 12%, 22% 2%, 4% 52%, 12% 97%, 85% 100%, 78% 69%, 47% 75%, 45% 63%, 71% 66%, 73% 45%, 45% 43%, 49% 30%, 80% 38%);
+  clip-path: polygon(86% 12%, 22% 2%, 4% 52%, 12% 97%, 85% 100%, 78% 69%, 47% 75%, 45% 63%, 71% 66%, 73% 45%, 45% 43%, 49% 30%, 80% 38%);
+}
+
+h1 span:nth-of-type(5) {
+  background-color: yellow;
+  -webkit-clip-path: polygon(12% 13%, 55% 5%, 85% 25%, 81% 57%, 69% 64%, 89% 83%, 62% 96%, 45% 70%, 46% 92%, 21% 95%, 43% 52%, 56% 52%, 59% 36%, 43% 31%, 44% 51%, 21% 96%);
+  clip-path: polygon(12% 13%, 55% 5%, 85% 25%, 81% 57%, 69% 64%, 89% 83%, 62% 96%, 45% 70%, 46% 92%, 21% 95%, 43% 52%, 56% 52%, 59% 36%, 43% 31%, 44% 51%, 21% 96%);
+}
+
+p {
+  text-align: center;
+}
+
+
+ol {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+ol li.gamewatch {
+  position: absolute;
+  display: flex;
+  justify-content: center; 
+  display: none;
+}
+
+/* game & watch styling */
+ol li.gamewatch section {
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  background-image: url("../images/1980.png");
+  background-size: 100% auto;
+  width: 32em;
+  aspect-ratio: 421/282;
+  background-repeat: no-repeat;
+
+}
+
+li.gamewatch.laatMijZien {
+  display: block;
+}
+
+ol li.gamewatch section article:nth-of-type(1) {
+  grid-column-start: 1;
+}
+
+ol li.gamewatch section article:nth-of-type(2) {
+  grid-column-start: 2;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  margin: 4.2em 1.4em 4.6em 1.3em;
+  overflow: scroll;  
+}
+
+ol li.gamewatch section article:nth-of-type(2) img.level {
+  height: 10em;
+  width: auto;
+}
+
+/* nintendo switch styling */
+ol li.switch section {
+  display: none;
+  grid-template-columns: 1fr 6fr 1fr;
+  background-image: url("../images/2017.png");
+  background-size: 100% auto;
+  width: 50em;
+  aspect-ratio: 1446/618;
+  background-repeat: no-repeat;
+}
+
+ol li.switch section article:nth-of-type(1) {
+  grid-column-start: 1;
+}
+
+ol li.switch section article:nth-of-type(2) {
+  grid-column-start: 2;
+  display: flex;
+  justify-content: center;  
+  align-items: flex-end;
+  margin: 2.2em 4.4em 2.7em 4.3em;
+  overflow: scroll;  
+}
+
+ol li.switch section article:nth-of-type(2) img.level {
+  height: 16.2em;
+  width: auto;
+}
+
+/* scrollbar verbergen bron: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+ol li.switch section article:nth-of-type(2)::-webkit-scrollbar {
+  display: none;
+}
+
+/* animatie achtergrond horizontaal laten scrollen */
+ol li.switch section article:nth-of-type(2) img.level {
+  animation: scrollHorizontaal 20s linear;
+}
+@keyframes scrollHorizontaal{
+  0% { 
+      transform: translatex(0); 
+  }
+  100% { 
+      transform: translatex(-108em);  
+  }
+}
+
+/* lopend mario gifje */
+ol li section article:nth-of-type(2) img.mario {
+  position: absolute;
+  width: 5em;
+  margin-top: -1.4em;
+  transform: scaleX(-1);
+  z-index: 1;
+}
+
+ol li section article:nth-of-type(3) {
+  grid-column-start: 3;
+}
+
+
+/* animatie Mario laten springen */
+img.mario.ikBenAanHetSpringen {
+  animation: springen 1s  linear;
+  transition: .2s;
+}
+
+@keyframes springen {
+  0% {
+    transform: translatey(0) scaleX(-1);  
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: translatey(-2em) scaleX(-1);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translatey(0) scaleX(-1);  
+  }
+} 
+
+/* controls stijlen aan de rechterkant nintendo switch */
+ol.controlsrechts {
+  display: grid;
+  grid-template-columns: 1.8em 1.8em 1.8em;
+  grid-template-rows: 1.6em 1.6em 1.6em;
+
+  margin-top: 3.2em;
+  opacity: 0;
+}
+
+ol.controlsrechts li:nth-of-type(1) {
+  grid-column-start: 2;
+}
+
+ol.controlsrechts li:nth-of-type(2) {
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+
+ol.controlsrechts li:nth-of-type(3) {
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+
+ol.controlsrechts li:nth-of-type(4) {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+
+
