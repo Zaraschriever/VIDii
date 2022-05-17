@@ -165,4 +165,6 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 2. bron 2
 3. ...
 
+/* scrollbar verbergen bron: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+
 </details>

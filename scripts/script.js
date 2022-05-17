@@ -1,6 +1,4 @@
-// JavaScript Document
-console.log("Howdy!");
-
+//animatie mario laten springen
 var deButton = document.querySelector(".spring");
 var deMario = document.querySelector(".mario");
 
@@ -15,12 +13,54 @@ function springenMaar() {
 }
 
 
+//variabelen game & watch
+var gameWatchButton = document.querySelector(".gamewatchbutton");
+var gameWatch = document.querySelector(".gamewatch");
 
-var hetJaar = document.querySelector(".eerste");
-var deNintendo = document.querySelector(".gamewatch");
+//variabelen gameboy
+var gameBoyButton = document.querySelector(".gameboybutton");
+var gameBoy = document.querySelector(".gameboy");
 
-hetJaar.addEventListener("click", laatZien);
+//variabelen nintendo switch
+var nintendoSwitchButton = document.querySelector(".switchbutton");
+var nintendoSwitch = document.querySelector(".switch");
 
-function laatZien() {
-    deNintendo.classList.toggle("laatMijZien");
+var tijdLijn = document.querySelector("menu");
+var terugKnop =document.querySelector(".terugnaarmap");
+
+//eventisteners
+gameWatchButton.addEventListener("click", klikOpGamewatch);
+gameBoyButton.addEventListener("click", klikOpGameboy);
+nintendoSwitchButton.addEventListener("click", klikOpSwitch);
+terugKnop.addEventListener("click", laatMapZien);
+
+
+//functies klik op
+function klikOpGamewatch() {
+    gameWatch.classList.add("laatGamewatchZien");
+    gameBoy.classList.remove("laatGameboyZien");
+    nintendoSwitch.classList.remove("laatSwitchZien");
+    tijdLijn.classList.add("menuVeranderen");
+}
+
+function klikOpGameboy() {
+    gameBoy.classList.add("laatGameboyZien");
+    gameWatch.classList.remove("laatGamewatchZien");
+    nintendoSwitch.classList.remove("laatSwitchZien");
+    tijdLijn.classList.add("menuVeranderen");
+}
+
+
+function klikOpSwitch() {
+    nintendoSwitch.classList.add("laatSwitchZien");
+    gameWatch.classList.remove("laatGamewatchZien");
+    gameBoy.classList.remove("laatGameboyZien");
+    tijdLijn.classList.add("menuVeranderen");
+}
+
+function laatMapZien() {
+    tijdLijn.classList.remove("menuVeranderen");
+    gameWatch.classList.remove("laatGamewatchZien");
+    gameBoy.classList.remove("laatGameboyZien");
+    nintendoSwitch.classList.remove("laatSwitchZien");
 }
