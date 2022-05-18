@@ -179,6 +179,8 @@ menu {
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
+
+  transition:.6s;
 }
 
 menu ol {
@@ -219,32 +221,7 @@ menu ol li button {
 
 /* jaartallen positioneren na het klikken op een jaartal */
 menu.menuVeranderen {
-  left: 5em;
-  animation: achtergrond-verplaatsen .6s forwards;
-}
-
-@keyframes achtergrond-verplaatsen {
-  from {
-    background-position: inherit;
-  }
-
-  to {
-    background-position: 0% -100%;
-  }
-}
-
-menu.menuOmhoog {
-  animation: achtergrond-omhoog .6s forwards;
-}
-
-@keyframes achtergrond-omhoog {
-  from {
-    background-position: 0% -100%;
-  }
-
-  to {
-    background-position: bottom;
-  }
+  background-position: 0% -100%;
 }
 
 menu.menuVeranderen ol {
@@ -458,23 +435,47 @@ iframe {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  margin: 3em 3.6em 2em 4.2em;
+  overflow: scroll;
 }
 
-.nintendos ol li.gameboy section:nth-of-type(1) img.level {
-  margin-left: .4em;
-  margin-top: 1.1em;
-
+.nintendos ol li.gameboy section:nth-of-type(1) img.begin, .nintendos ol li.gameboy section:nth-of-type(1) img.level {
   height: 9.2em;
   width: auto;
 }
 
+/* na het klikken op start begint het spel */
+.nintendos ol li.gameboy section:nth-of-type(1) img.begin {
+  position: absolute;
+  z-index: 10;
+}
+
+.nintendos ol li.gameboy section:nth-of-type(1) img.begin.jeKanNuSpelen {
+  opacity: 0;
+  transition: 1s;
+}
+
 .nintendos ol li.gameboy section:nth-of-type(1) img.mario {
   position: absolute;
-  width: 4em;
+
+  margin-top: 2em;
+  width: 2em;
 }
 
 .nintendos ol li.gameboy section:nth-of-type(2) {
   grid-row-start: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  margin-bottom: 4em;
+}
+
+.nintendos ol li.gameboy section:nth-of-type(2) button {
+  padding: 2em;
+  opacity: 0;
 }
 
 
@@ -502,7 +503,7 @@ iframe {
 /* **************************************** */
 
 .nintendos ol li.advance {
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 6em auto 6em;
 
   width: 26em;
   aspect-ratio: 1181/677;
@@ -513,29 +514,36 @@ iframe {
 .nintendos ol li.advance section:nth-of-type(2) {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 
   width: 8em;
-  margin: 2.6em 6.2em 2em 6.4em;
+  margin: 2.6em 2em 4.7em 3em;
 
   overflow: scroll;
 }
 
+.nintendos ol li.advance section:nth-of-type(1) ol li {
+  display: block;
+
+  margin-top: 5.6em;
+  opacity: 0;
+
+  animation: none;
+}
+
 .nintendos ol li.advance section:nth-of-type(2) img.level {
-  height: 7em;
+  height: 7.1em;
   width: auto;
 }
 
-.nintendos ol li.advance section:nth-of-type(1) img.mario {
+.nintendos ol li.advance img.mario {
   position: absolute;
-  width: 4em;
+  top: 11em;
+
+  width: 1em;
 }
 
-.nintendos ol li.advance section:nth-of-type(3) {
-  grid-row-start: 3;
-}
-
-/* laat de gamewatch en de styling zien na klikken op jaartal */
+/* laat de advance en de styling zien na klikken op jaartal */
 
 .nintendos ol li.advance.laatAdvanceZien {
   display: grid;
@@ -548,6 +556,32 @@ iframe {
   width: 20em;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.nintendos ol li.advance section:nth-of-type(2) img.mario.ikLoopNaarLinks {
+  animation: loopNaarLinks 1.4s linear ;
+}
+
+@keyframes loopNaarLinks {
+  0% {
+    transform: translatex(0) scaleX(-1);
+  }
+  100% {
+    transform: translatex(-3em) scaleX(-1);
+  }
+}
+
+.nintendos ol li.advance section:nth-of-type(2) img.mario.ikLoopNaarRechts {
+  animation: loopNaarRechts 1.4s linear ;
+}
+
+@keyframes loopNaarRechts {
+  0% {
+    transform: translatex(0);
+  }
+  100% {
+    transform: translatex(3em);
+  }
 }
 
 
@@ -567,39 +601,69 @@ iframe {
 }
 
 .nintendos ol li.ds section:nth-of-type(1) {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+}
+
+.snowflake {
+  position: fixed;
+  display: block;
+  user-select: none;
+  z-index: 1000;
+  pointer-events: none;
+  width: 2em;
+  height: auto;
+}
+
+/* .snowflake.mushroomsVallenNu {
+  display: block;
+} */
+
+.nintendos ol li.ds section:nth-of-type(2) {
   grid-column-start: 2;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 
-  margin: 1em .4em 1.25em .4em;
+  margin: 1em .5em 2.5em .6em;
 
   overflow: scroll;
 }
 
-.nintendos ol li.ds section:nth-of-type(1) img.level {
-  height: 9.2em;
+.nintendos ol li.ds section:nth-of-type(2) img.level {
+  height: 9.1em;
   width: auto;
 }
 
-.nintendos ol li.ds section:nth-of-type(1) img.mario {
+.nintendos ol li.ds section:nth-of-type(2) img.mario {
   position: absolute;
   width: 4em;
+  transform: scaleX(-1);
 }
 
-.nintendos ol li.ds section:nth-of-type(2) {
+.nintendos ol li.ds section:nth-of-type(3) {
   grid-column-start: 2;
   grid-row-start: 2;
 
   margin: 2.2em .4em 1.25em .4em;
 }
 
-.nintendos ol li.ds section:nth-of-type(2) img {
+.nintendos ol li.ds section:nth-of-type(3) img {
   height: 9.2em;
 }
 
+.nintendos ol li.ds section:nth-of-type(4) {
+  grid-column-start: 3;
+  grid-row-start: 2;
 
-/* laat de gamewatch en de styling zien na klikken op jaartal */
+  margin-top: 1em;
+}
+
+
+/* laat de ds en de styling zien na klikken op jaartal */
 
 .nintendos ol li.ds.laatDsZien {
   display: grid;
@@ -613,6 +677,8 @@ iframe {
   top: 50%;
   transform: translateY(-50%);
 }
+
+
 
 
 
@@ -647,7 +713,7 @@ iframe {
 
 .nintendos ol li.switch section:nth-of-type(2) {
   grid-column-start: 2;
-  margin: 2em 3.1em 2em 3.4em;
+  margin: 1.8em 3em 1.8em 3em;
 
   display: flex;
   justify-content: center;
@@ -657,7 +723,7 @@ iframe {
 }
 
 .nintendos ol li.switch section:nth-of-type(2) img.level {
-  height: 14.2em;
+  height: 11.1em;
   width: auto;
 }
 
@@ -708,8 +774,23 @@ iframe {
 /* *********************************** */
 
 /* scrollbar verbergen bron: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
-.nintendos ol li.switch section:nth-of-type(2)::-webkit-scrollbar, .nintendos ol li.advance section:nth-of-type(2)::-webkit-scrollbar, .nintendos ol li.ds section:nth-of-type(1)::-webkit-scrollbar {
+.nintendos ol li.switch section:nth-of-type(2)::-webkit-scrollbar, .nintendos ol li.advance section:nth-of-type(2)::-webkit-scrollbar, .nintendos ol li.ds section:nth-of-type(2)::-webkit-scrollbar, .nintendos ol li.gameboy section:nth-of-type(1)::-webkit-scrollbar {
   display: none;
+}
+
+/* animatie achtergrond gameboy horizontaal laten scrollen */
+.nintendos ol li.gameboy section:nth-of-type(1) img.level {
+  animation: scrollHorizontaalGameboy 12s linear;
+}
+
+@keyframes scrollHorizontaalGameboy {
+  0% {
+    transform: translatex(0);
+  }
+
+  100% {
+    transform: translatex(-15em);
+  }
 }
 
 
@@ -729,7 +810,7 @@ iframe {
 }
 
 /* animatie achtergrond nintendo ds horizontaal laten scrollen */
-.nintendos ol li.ds section:nth-of-type(1) img.level {
+.nintendos ol li.ds section:nth-of-type(2) img.level {
   animation: scrollHorizontaalDs 6s linear;
 }
 
@@ -745,7 +826,7 @@ iframe {
 
 /* animatie achtergrond nintendo switch horizontaal laten scrollen */
 .nintendos ol li.switch section:nth-of-type(2) img.level {
-  animation: scrollHorizontaalSwitch 20s linear;
+  animation: scrollHorizontaalSwitch 16s linear;
 }
 
 @keyframes scrollHorizontaalSwitch {
@@ -754,7 +835,7 @@ iframe {
   }
 
   100% {
-    transform: translatex(-108em);
+    transform: translatex(-86em);
   }
 }
 
