@@ -1,14 +1,29 @@
 //animatie mario laten springen
-var deButton = document.querySelector(".spring");
-var deMario = document.querySelector(".mario");
+var deSwitchButton = document.querySelector(".switch .spring");
+var deSwitchMario = document.querySelector(".switch .mario");
 
-deButton.addEventListener("click", springenMaar);
+deSwitchButton.addEventListener("click", springenSwitchMaar);
+deSwitchButton.addEventListener("keydown", springenSwitchMaar);
 
-function springenMaar() {
-    deMario.classList.add("ikBenAanHetSpringen");
-    deMario.addEventListener("animationend", function(e) {
-        console.log(e);
+function springenSwitchMaar() {
+    deSwitchMario.classList.add("ikBenAanHetSpringen");
+    deSwitchMario.addEventListener("animationend", function(e) {
+        // console.log(e);
         e.target.classList.remove("ikBenAanHetSpringen");
+    });
+}
+
+//animatie mario laten groeien
+var deSwitchGroeiButton = document.querySelector(".switch .groei");
+var deSwitchMario = document.querySelector(".switch .mario");
+
+deSwitchGroeiButton.addEventListener("click", groeienSwitchMaar);
+deSwitchGroeiButton.addEventListener("keydown", groeienSwitchMaar);
+
+function groeienSwitchMaar() {
+    deSwitchMario.classList.add("ikBenAanHetGroeien");
+    deSwitchMario.addEventListener("animationend", function(e) {
+        e.target.classList.remove("ikBenAanHetGroeien");
     });
 }
 
@@ -21,6 +36,14 @@ var gameWatch = document.querySelector(".gamewatch");
 var gameBoyButton = document.querySelector(".gameboybutton");
 var gameBoy = document.querySelector(".gameboy");
 
+//variabelen gameboy advance
+var advanceButton = document.querySelector(".advancebutton");
+var advance = document.querySelector(".advance");
+
+//variabelen ds
+var dsButton = document.querySelector(".dsbutton");
+var ds = document.querySelector(".ds");
+
 //variabelen nintendo switch
 var nintendoSwitchButton = document.querySelector(".switchbutton");
 var nintendoSwitch = document.querySelector(".switch");
@@ -32,35 +55,75 @@ var terugKnop =document.querySelector(".terugnaarmap");
 gameWatchButton.addEventListener("click", klikOpGamewatch);
 gameBoyButton.addEventListener("click", klikOpGameboy);
 nintendoSwitchButton.addEventListener("click", klikOpSwitch);
+advanceButton.addEventListener("click", klikOpAdvance);
+dsButton.addEventListener("click", klikOpDs);
+
 terugKnop.addEventListener("click", laatMapZien);
 
 
 //functies klik op
 function klikOpGamewatch() {
     gameWatch.classList.add("laatGamewatchZien");
+
     gameBoy.classList.remove("laatGameboyZien");
+    advance.classList.remove("laatAdvanceZien");
+    ds.classList.remove("laatDsZien");
     nintendoSwitch.classList.remove("laatSwitchZien");
+
     tijdLijn.classList.add("menuVeranderen");
 }
 
 function klikOpGameboy() {
     gameBoy.classList.add("laatGameboyZien");
+
     gameWatch.classList.remove("laatGamewatchZien");
+    advance.classList.remove("laatAdvanceZien");
+    ds.classList.remove("laatDsZien");
     nintendoSwitch.classList.remove("laatSwitchZien");
+
     tijdLijn.classList.add("menuVeranderen");
 }
 
+function klikOpAdvance() {
+    advance.classList.add("laatAdvanceZien");
+
+    gameWatch.classList.remove("laatGamewatchZien");
+    gameBoy.classList.remove("laatGameboyZien");
+    ds.classList.remove("laatDsZien");
+    nintendoSwitch.classList.remove("laatSwitchZien");   
+
+    tijdLijn.classList.add("menuVeranderen");
+}
+
+function klikOpDs() {
+    ds.classList.add("laatDsZien");
+
+    gameWatch.classList.remove("laatGamewatchZien");
+    gameBoy.classList.remove("laatGameboyZien");
+    advance.classList.remove("laatAdvanceZien");
+    nintendoSwitch.classList.remove("laatSwitchZien");
+
+    tijdLijn.classList.add("menuVeranderen");
+}
 
 function klikOpSwitch() {
     nintendoSwitch.classList.add("laatSwitchZien");
+
     gameWatch.classList.remove("laatGamewatchZien");
     gameBoy.classList.remove("laatGameboyZien");
+    advance.classList.remove("laatAdvanceZien");
+    ds.classList.remove("laatDsZien");
+
     tijdLijn.classList.add("menuVeranderen");
 }
 
 function laatMapZien() {
+    tijdLijn.classList.add("menuOmhoog");
+
     tijdLijn.classList.remove("menuVeranderen");
     gameWatch.classList.remove("laatGamewatchZien");
     gameBoy.classList.remove("laatGameboyZien");
+    advance.classList.remove("laatAdvanceZien");
+    ds.classList.remove("laatDsZien");
     nintendoSwitch.classList.remove("laatSwitchZien");
 }

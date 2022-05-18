@@ -13,10 +13,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Jij
 
 ### Ontwerper:
-Sanne 't Hooft (vervangen door jouw naam)
+Zara Schriever
 
 #### Je startniveau:
-Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
+Mijn startniveau is: rood (maar een beetje paars)
 
 
 
@@ -25,7 +25,13 @@ Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
 # Je plan
 
 <details open>
-  <summary>De eerste versie/schets van je ontwerp & je persoonlijke uitdaging</summary>
+  <summary>Ik heb gekozen voor de opdracht tijdlijn en voor het personage Mario. Hierbij had ik bedacht om het spel
+  Super Mario Bros na te gaan maken, elk jaar zie je dan de Nintendo en het spel zelf veranderen.
+  
+  Zoals in onderstaande schets te zien is, krijg je op het beginscherm een wereld van Super Mario Bros te zien, dit stelt 
+  de tijdlijn voor. Wanneer je vervolgens op een jaartal klikt krijg je de Nintendo te zien van het bijpassende jaar. Op 
+  elke Nintendo kan je Mario ook acties laten uitvoeren, zodat je een beetje het gevoel krijgt alsof je het spel aan het
+  spelen bent.</summary>
 
   ### De eerste versie/schets:
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="eerste versie/schets">
@@ -33,9 +39,9 @@ Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
+  - JavaScript
+  - Animaties met CSS maken
+  - ...
   - ...
  
 </details>
@@ -46,7 +52,7 @@ Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
 ## Voortgang/Feedback 1
 
 <details>
-  <summary>Mijn bevindingen + wijzigingen (minimaal 5)</summary>
+  <summary>Bij het eerste feedback moment kwam ik erachter dat ik het toch iets te lastig voor mezelf had gemaakt. Daarom had ik het idee van de tijdlijn in de wereld maar even laten vallen en me vooral gefocust op de Nintendos zelf en de acties van Mario. </summary>
 
   ### Bevinding 1:
   Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
@@ -78,12 +84,11 @@ Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
   <summary>Mijn bevindingen + wijzigingen (minimaal 5)</summary>
   
   ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  De titel Super Mario staat nog een beetje random en past niet bij de rest van de pagina.
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
-
+  Omdat de titel niet heel mooi werd toen ik dit met clip-path probeerde heb ik de titel in het lettertype van het Mario Bros logo geschreven. Om het nog wat leuker te maken heb ik een animatie toegevoegd waarbij de letters 1 voor 1 naar binnen komen rollen aan het begin. Als je over de letters hovert springen ze ook een beetje omhoog.
+  
 
   ### Bevinding 2:
   Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
