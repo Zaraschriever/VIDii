@@ -6,7 +6,7 @@
 Zara Schriever
 
 #### Je startniveau:
-Mijn startniveau is: rood (maar een beetje paars)
+Mijn startniveau is: rood (beetje paarsig)
 
 
 
@@ -24,14 +24,14 @@ Mijn startniveau is: rood (maar een beetje paars)
   spelen bent.</summary>
 
   ### De eerste versie/schets:
-  <img src="readme-images/schets.jpg" width="375px" alt="eerste versie/schets">
+  <img src="readme-images/schets.jpeg" width="375px" alt="eerste versie/schets">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
   - JavaScript
   - Animaties met CSS maken
-  - Beter worden als CSS
+  - Beter worden in CSS
 
  
 </details>
@@ -119,25 +119,29 @@ Mijn startniveau is: rood (maar een beetje paars)
 ## Voortgang/Feedback 3
 
 <details>
-  <summary>Mijn bevindingen + wijzigingen (minimaal 5)</summary>
+  <summary>Bij de laatste voortgang was ik eindelijk wat verder gekomen en begon het er ook mooi uit te gaan zien.</summary>
   
   ### Bevinding 1:
   Het tekstvak en de buttons zijn nog niet helemaal mooi uitgelijnd met de Nintendo in het midden.
 
   #### oplossing:
-  Ik heb ervoor gezorgd dat de buttons, de Nintendo en het tekstvlak op de middenlijn worden uitgelijnd.
+  Ik heb ervoor gezorgd dat de buttons, de Nintendo en het tekstvlak op de middenlijn worden uitgelijnd. Hierdoor ziet de layout er bij elke Nintendo ongeveer hetzelfde uit.
 
 
   ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  De tijdlijn in de map staat een beetje in de weg en wordt nogal druk wanneer er ook een Nintendo en tekstveld te zien is. 
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
+  Ik heb bedacht om de tijdlijn naar beneden te schuiven wanneer je op een jaartal klikt. De tijdlijn is wel nog aan de onderkant te zien en je kan met de knop "terug naar map" ook weer de tijdlijn omhoog halen. Er zit een animatie op zodat het er echt uitziet alof de tijdlijn wegschuift.
 
 
   ### Bevinding 3:
-  ...
+  Het tekstveld en de jaartallen passen nog niet echt bij de stijl van het spel.
+
+  #### oplossing:
+  Ik heb het bord met tekst dat je af en toe in het spel ziet een beetje proberen na te maken voor de jaartallen en het tekstveld. Met een rode achtergrond, zwart en roze box-shadow en het mario bros lettertype.
+
+  <img src="readme-images/tekstveld.png" width="375px" alt="tekstveld">
 
 </details>
 
@@ -164,6 +168,7 @@ Mijn startniveau is: rood (maar een beetje paars)
   <img src="readme-images/jump.png" width="375px" alt="top">
 
 
+
   Het leek me leuk om de titel met een animatie binnen te laten komen, ik had bedacht dat ik deze op hun plek wilde laten rollen. Het leek me heel erg moeilijk om te doen, maar dankzij een stukje code dat ik had gevonden was het eigenlijk heel makkelijk. 
 
   <img src="readme-images/rollen.png" width="375px" alt="top">
@@ -175,6 +180,7 @@ Mijn startniveau is: rood (maar een beetje paars)
   Ik wilde wanneer je bij de Nintendo DS op het paddenstoeltje klikte er allemaal paddenstoeltjes uit de lucht zouden vallen. Met heel veel JavaScript wat ik had gevonden lukte dit. Maar helaas kreeg ik het niet voor elkaar om dit pas te laten gebeuren wanneer je op de paddenstoel klikt.
 
   <img src="readme-images/mushrooms.png" width="375px" alt="bummer">
+
 
   Eigenlijk wilde ik ervoor zorgen dat je op elke Nintendo op elk knopje kon klikken en er dan wat gebeurde. Omdat dit nogal veel tijd koste en de code hier heel erg lang door zou worden heb ik dit niet gedaan. Maar als ik meer tijd zou hebbenn gehad had ik dit nog wel willen doen.
 
@@ -195,10 +201,7 @@ Mijn startniveau is: rood (maar een beetje paars)
 1. Scrollbar verbergen achtergrond nintendo - bron: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp
 2. Animatie om de nintendo binnen te laten komen - bron: https://css-tricks.com/a-handy-little-system-for-animated-entrances-in-css/
 3. Falling mushroom animatie - bron: https://www.kirupa.com/html5/the_falling_snow_effect.htm
-
-
-
-
+4. Titel binnen laten rollen - bron: https://codepen.io/naveenmaurya/pen/ApBvKV
 
 
 </details>
